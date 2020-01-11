@@ -1,2 +1,25 @@
 This is a note for my own recollection of the important topics in the mooc-fi coures: DevOps with Docker. The note will contain impoertant commands and reflections on those
 on the commands. This will help me to understand the concepts better.
+### What's a Docker Image? ###
+
+Image is a file. It is built according to an instruction file called Dockerfile. An image never changes; you can not edit an existing file, but you can create a new **layer** to it.
+
+### What's a Docker Container? ###
+
+Containers only contain that which is required to execute an application; and you can start, stop and interact with them. They are **isolated** environments in the host machine with the ability to interact with each other and the host machine itself via defined methods (TCP/UDP).
+
+### Image vs container ###
+
+Containers are instances of images.
+
+Cooking metaphor:
+* Dockerfile is the shopping list (& recipe).
+* Image is the ingredients.
+* Container is the delicious treat.
+
+1. To get an image, you have to build it with the Dockerfile.
+2. You then run the image creating a container.
+
+So, perhaps an even more fitting metaphor would be that the image is a frozen, pre-cooked meal.
+
+To get a docker image and create an instance of the image, run the command: `docker run hello-world` from the command line
